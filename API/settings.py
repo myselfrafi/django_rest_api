@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,10 +79,10 @@ WSGI_APPLICATION = 'API.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dj_api_items',  #table name= api_products_item
-        'USER': 'root',
-        'PASSWORD': 'Rafi@786',
-        'HOST': 'mysql.render.com',
+        'NAME': os.environ.get("git add ."),     #table name= api_products_item
+        'USER': os.environ.get("root"),
+        'PASSWORD':os.environ.get("Rafi@786"),
+        'HOST':os.environ.get("mysql.render.com"),
         'PORT': 3306,
     }
 }

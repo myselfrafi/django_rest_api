@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'dj_api_items',  #table name= api_products_item
         'USER': 'root',
         'PASSWORD': 'Rafi@786',
-        'HOST': 'localhost',
+        'HOST': 'mysql.render.com',
         'PORT': 3306,
     }
 }
